@@ -1,0 +1,39 @@
+Hadoop Commands Start
+
+hadoop@pict-OptiPlex-3020:~$ cd hadoop-3.3.5 
+hadoop@pict-OptiPlex-3020:~/hadoop-3.3.5$ cd sbin
+hadoop@pict-OptiPlex-3020:~/hadoop-3.3.5/sbin$ jps
+hadoop@pict-OptiPlex-3020:~/hadoop-3.3.5/sbin$ ./start-dfs.sh
+hadoop@pict-OptiPlex-3020:~/hadoop-3.3.5/sbin$ jps
+hadoop@pict-OptiPlex-3020:~/hadoop-3.3.5/sbin$ ./start-yarn.sh
+
+Open Eclipse
+1.Create java project
+2. Set java version SE-11 or SE-1.8
+3. Uncheck moule info.java
+4. Add libraries(total 11 - from mapreduce and hadoop common)
+5. Create class file
+6. Save and Build project
+7. Export the project as JAR file, rthen untick and tick the project to select two files
+8. Add main class at the end
+9. Open terminal from the folder of the jar file
+10. localhost:9870/
+
+If wordinput file is already created
+hadoop@pict-OptiPlex-3020:~/Downloads$ hadoop fs -mkdir /31155
+hadoop@pict-OptiPlex-3020:~/Downloads$ hadoop fs -mkdir /31155/input
+hadoop@pict-OptiPlex-3020:~/Downloads$ hadoop fs -put wordinput.txt /31155/input
+hadoop@pict-OptiPlex-3020:~/Downloads$ hadoop jar A11.jar /31155/input /31155/output
+
+If wordinput needs to be created in terminal 
+nano input.txt
+Then ctrl+s and ctrl+x
+hadoop@pict-OptiPlex-3020:~/Downloads$ hadoop fs -put wordinput.txt /31155/input
+hadoop@pict-OptiPlex-3020:~/Downloads$ hadoop jar A11.jar /31155/input /31155/output
+
+Output on terminal
+hadoop@pict-OptiPlex-3020:~/Downloads$ hadoop fs -cat /31155/output/*
+
+Compile and create jar fil 
+javac -classpath ${HADOOP_CLASSPATH} -d (drag the classes folder) (drag the Program.java file)
+jar -cvf WordCount.jar -C Classes/.
