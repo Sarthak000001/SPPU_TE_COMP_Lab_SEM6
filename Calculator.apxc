@@ -1,0 +1,40 @@
+public class Calculator {
+	public Integer result;
+    public void addition(Integer x,Integer y){
+        result = x + y;
+        System.debug('Addition is : '+result);
+    }
+    public void subtraction(Integer x,Integer y){
+        result = x - y;
+        System.debug('Subtraction is : '+result);
+    }
+    public void multiplication(Integer x,Integer y){
+        result = x * y;
+        System.debug('Multiplication is : '+result);
+    }
+    public void division(Integer x,Integer y){
+        if(y != 0){
+            result = x / y;
+            System.debug('Division is : '+result);
+        }else{
+			System.debug('Error : Divison by Zero');
+        }
+    }
+    public void sqr(Integer x){
+        result = x * x;
+        System.debug('Square : '+result);
+    }
+    public void sqr(Decimal x){
+        Decimal sq = x * x;
+        System.debug('Square : '+sq);
+    }
+    public void sqrt(Decimal x){
+        Decimal sqroot = Math.sqrt(x);
+        System.debug('Square root is : '+sqroot);
+    }
+     public void power(Integer x,Integer y){
+        Decimal pow1 = Math.pow(x,y);
+        System.debug('Power answer is : '+pow1);
+    }
+    
+}

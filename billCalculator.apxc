@@ -1,0 +1,11 @@
+public class billCalculator {
+	public Decimal rate;
+    public billCalculator(Decimal ratePerUnit){
+        this.rate = ratePerUnit;
+    }
+    
+    public void calculate(Integer units){
+        Decimal bill = units * rate;
+        System.debug('Electricity bill for '+units+' units:$'+bill);
+    }
+}

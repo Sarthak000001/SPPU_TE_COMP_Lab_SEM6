@@ -1,0 +1,14 @@
+public class temConverter {
+    public void c_to_f(Integer cval){
+        Double temp = (cval * 1.8) + 32;
+        System.debug('Fahrenheit of '+cval+'celsius is '+temp);
+    }
+    public void f_to_c(Integer fval){
+        Double temp = (fval-32)/1.8;
+        System.debug('Celsius of '+fval+'Fahrenheit is '+temp);
+    }
+    public void k_to_c(Integer kval){
+        Double temp = (kval - 273.15);
+       	System.debug('Celsius of '+kval+'Kelvin is '+temp);
+    }
+}

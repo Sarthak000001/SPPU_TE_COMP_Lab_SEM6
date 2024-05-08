@@ -1,0 +1,44 @@
+public class markSheet {
+    public void generateMarkSheet(String studentname,Map<String,Integer>subjects){
+		Integer totalmarks = 0;
+        for(String subject : subjects.keySet()){
+            totalmarks += subjects.get(subject);
+        }
+        Integer numberOfSubjects = subjects.size();
+        Decimal averageMark = (Decimal)totalmarks/numberOfSubjects;
+        
+        String grade;
+        if(averageMark >= 90){
+			grade = 'A';
+        }
+        else if(averageMark >= 80){
+			grade = 'B';
+        }
+        else if(averageMark >= 70){
+			grade = 'C';
+        }
+        else if(averageMark >= 60){
+            grade = 'D';
+        }else{
+            grade = 'F';
+        }
+        
+        System.debug('Mark Sheet of : '+studentname);
+        System.debug('Subjects and Marks : '+subjects);
+        System.debug('Total Marks : '+totalmarks);
+        System.debug('Average Mark : '+averageMark);
+        System.debug('Grade : '+grade);
+    }
+}
+
+/*
+markSheet s = new markSheet();
+Map<String,Integer>subjects = new Map<String,Integer>{
+    'Math'=>95,
+    'Science'=>90,
+    'History'=>88,
+    'English'=>82,
+    'Art'=>92
+};
+s.generateMarkSheet('Sarthak Nirgude',subjects);
+*/

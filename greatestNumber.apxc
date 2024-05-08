@@ -1,0 +1,16 @@
+public class greatestNumber {
+    public void compare(Integer x,Integer y,Integer z){
+        if(x == y && y == z){
+            System.debug('The greatest number is '+x);
+        }
+        else if(x > y && x > z){
+            System.debug('The greatest number is '+x);
+        }
+        else if(y > x && y > z){
+            System.debug('The greatest number is '+y);
+        }
+        else{
+            System.debug('The greatest number is '+z);
+        }
+    }
+}

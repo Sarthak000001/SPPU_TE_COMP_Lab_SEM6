@@ -1,0 +1,15 @@
+public class currencyConverter {
+	public Decimal USD_to_INR_rate = 83.5;
+    public Decimal INR_to_USD_rate = 1 / USD_to_INR_rate;
+    
+     // Method to convert USD to INR
+    public void Convert_to_INR(Decimal usdAmt){
+        Decimal inrAmt = usdAmt * USD_to_INR_rate;
+        System.debug('USD ' + usdAmt + ' is equivalent to INR ' + inrAmt);
+    }
+    // Method to convert INR to USD
+    public void Convert_to_USD(Decimal inrAmt){
+        Decimal usdAmt = inrAmt * INR_to_USD_rate;
+        System.debug('INR ' + inrAmt + ' is equivalent to USD ' + usdAmt);
+    }
+}
